@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contact-us">
+        <h2>CONTACT US</h2>
+        <div class="hr">
+            <hr>
+        </div>
+    </div>
+
+    <form name="myForm" onsubmit="return script()" id="form">
+        <div class="contact-box">
+            <div class="input-user">
+                <label for="name" class="required">FULL NAME</label>
+                <input type="text" id="fullName">
+            </div>
+
+            <div class="input-user">
+                <label for="email" class="required">EMAIL</label>
+                <input type="email" id="email">
+            </div>
+
+
+            <div class="input-user">
+                <label for="message" class="required">MESSAGE</label>
+                <textarea name="comment" id="komen"></textarea>
+            </div>
+
+            <button onclick="myFunction()">Send Message</button>
+        </div>
+
+        
+
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
