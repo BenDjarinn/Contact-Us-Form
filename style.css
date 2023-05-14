@@ -10,6 +10,12 @@
 body {
     padding-top: 80px;
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(153, 153, 153);
+    margin: 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-us h2 {
@@ -19,12 +25,12 @@ body {
 .contact-us {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    gap: 25px;
+    margin-bottom: 2.5rem;
 }
 
 .contact-us hr {
-    background-color: #fbae3c;
+    background-color: #262626;
     height: 3px;
     width: 260px;
    
@@ -34,8 +40,7 @@ body {
     padding-top: 35px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 35px;
+    gap: 10px;
 }
 
 
@@ -59,26 +64,38 @@ label {
     font-size: 15px;
 }
 
-.input-user textarea {
-    width: 550px;
-    height: 150px;
-    resize: none;
-    border: 1px solid #ced4da;
-    padding: 1.0rem 0.5rem;
+.gender {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 5px;
+   
 }
 
-.contact-box button {
+#gender-option {
+    display: flex;
+    gap: 10px;
+}
+
+
+#gender-option label {
+    font-size: 20px;
+    display: flex;
+}
+
+
+button {
     font-size: 17px;
     width: 550px;
     height: 50px;
     padding: 5px 0;
-    border: 1px solid #fbae3c;
+    border: 1px solid #262626;
     color: white;
-    background-color: #fbae3c;
+    background-color: #262626;
 }
 
 .contact-box button:hover {
-    background-color: #f1a129;
+    filter: brightness(90%);
 }
 
 .required::after {
@@ -112,4 +129,14 @@ textarea:valid {
     border-radius: inherit;
 }
 
+#error-message {
+    visibility: hidden;
+    color: rgb(158, 0, 0);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 

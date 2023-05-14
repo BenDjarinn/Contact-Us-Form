@@ -15,26 +15,36 @@
         </div>
     </div>
 
-    <form name="myForm" onsubmit="return script()" id="form">
-        <div class="contact-box">
+    <form name="myForm" id="form">
+       
             <div class="input-user">
                 <label for="name" class="required">FULL NAME</label>
                 <input type="text" id="fullName">
+                <p id="error-message">Error Message</p>
             </div>
 
             <div class="input-user">
                 <label for="email" class="required">EMAIL</label>
                 <input type="email" id="email">
+                <p id="error-message">Error Message</p>
             </div>
 
 
-            <div class="input-user">
-                <label for="message" class="required">MESSAGE</label>
-                <textarea name="comment" id="komen"></textarea>
+            <div class="gender" id="gender-form">
+                <label for="gender" class="required" id="gender-label">GENDER</label>
+                <div id="gender-option">
+                    <input type="radio" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" name="gender" value="female">
+                    <label for="male">Female</label><br>
+                </div>
+                <p id="error-message">Error Message</p>
             </div>
 
-            <button onclick="myFunction()">Send Message</button>
-        </div>
+            
+            <button id="submit">SUBMIT</button>
+
+        
 
         
 

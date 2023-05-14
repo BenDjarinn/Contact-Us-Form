@@ -1,35 +1,52 @@
-function script() {
-    let fullName = document.getElementById("fullName").value.trim()
-    let email = document.getElementById("email").value.trim()
-    let komen = document.getElementById("komen").value.trim()
+const fullName = document.querySelector('#fullName');
+const email = document.querySelector('#email');
+const gen = document.forms["myForm"]["gender"]
+const submit = document.querySelector('#submit');
 
-    if(fullName == ""){
-        alert("Full name is required!")
-        return false
+submit.addEventListener('click', (event)=> {
+
+    event.preventDefault();
+
+    if (fullName.value.trim() == '') {
+        error (fullName, 'Fullname can not be empty');
+    }
+    else {
+        success(fullName)
     }
 
-    if(fullName.length <= 3) {
-        alert("Please Enter More Than 3 Characters")
-        return false;
+    if (email.value.trim() == '') {
+        error (email, 'Email can not be empty');
+    }
+    else {
+        success(email)
     }
 
-    if(email == ""){
-        alert("Email is required!")
-        return false
+    if (gen[0].checked == false && gen[1].checked == false) {
+        errorGender (gen, 'Please select your gender');
     }
 
-    if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
-        alert("Email must contain '@' and '.com'");
-        return false;
-    }
 
     
-    if(komen.split(/\s+/).length < 3) {
-        alert("Message must have at least 3 words")
-        return false;
-    }
+});
 
-    alert("Form Submitted Successfully!");
-    return true;
+function error(element, msg) {
+    element.style.border = '3px red solid';
+    const parent = element.parentElement;
+    const p = parent.querySelector('p');
+    p.textContent = msg;
+    p.style.visibility = 'visible';
 }
+
+function success(element) {
+    element.style.border = '3px green solid';
+    const parent = element.parentElement;
+    const p = parent.querySelector('p');
+    p.style.visibility = 'hidden';
+}
+
+
+
+
+
+  
 
